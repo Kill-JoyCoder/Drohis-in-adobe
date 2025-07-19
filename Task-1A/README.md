@@ -12,4 +12,5 @@ This implementation aims at providing the structure of a pdf which is then writt
 - PyMuPDF: extracts PDF metadata to get text size 
 - glob: to recognise all pdf files present in Task-1A/input
 - json: for relevant output json format
+- os: reading into a pdf and writing out the json 
 
