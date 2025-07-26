@@ -1,9 +1,1 @@
-Python:
-  |--Python 3.12.1 
-  |--PyMuPDF for fitz library (>=1.26.3)
-  |--json #inbuilt
-  |--os #inbuilt
-  |--glob #inbuilt
-
-Docker:
-  |--
+pymupdf>=1.26.3
