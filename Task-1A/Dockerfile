@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 python:3.12.1-alpine
+FROM --platform=amd64 python:3.12.1-alpine
 
 WORKDIR /Task-1A
 

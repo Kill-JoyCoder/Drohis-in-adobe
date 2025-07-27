@@ -5,7 +5,7 @@ import os
 from glob import glob
 
 
-with open("Task-1A/schema/output_schema.json", "r", encoding="utf-8") as f:
+with open("./output_schema.json", "r", encoding="utf-8") as f:
     OUTPUT_SCHEMA = json.load(f)
 
 def extract_outline(pdf_path, max_pages=50):
@@ -104,8 +104,8 @@ def validate_against_schema(data, schema):
     return _validate(data, schema)
 
 def main():
-    IN_DIR = os.path.join("Task-1A/input")
-    OUT_DIR = os.path.join("Task-1A/output")
+    IN_DIR = os.path.join("./input")
+    OUT_DIR = os.path.join("./output")
     os.makedirs(OUT_DIR, exist_ok=True)
 
     pdfs = glob(os.path.join(IN_DIR, "*.pdf"))
@@ -118,7 +118,7 @@ def main():
         name, _ = os.path.splitext(base)
         out_path = os.path.join(OUT_DIR, f"{name}.json")
 
-        print(f"➡️ Processing {base} ...")
+        print(f"Processing {base} ...")
         data = extract_outline(pdf_path)
 
         ok, err = validate_against_schema(data, OUTPUT_SCHEMA)
