@@ -1,4 +1,5 @@
 What This Project Is
+
 This tool acts as a “document analyst”: it extracts and ranks the most relevant PDF sections based on:
 
 Your persona (e.g., student, analyst, researcher, manager)
@@ -25,6 +26,7 @@ Accepts persona, job, and PDFs at runtime (interactive or CLI arguments)
 Outputs hackathon-compliant JSON files, including rich summaries for each result
 
 Features
+
 Multi-document analysis: Handles 3–10 PDFs per run
 
 Semantic relevance: State-of-the-art embeddings match user context to document content
