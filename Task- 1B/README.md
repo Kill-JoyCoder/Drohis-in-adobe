@@ -101,12 +101,5 @@ For any issues, consult README.md troubleshooting section or contact the project
 
 ---
 
-### ✅ Instructions
-
-1. Copy the entire Markdown content above.
-2. Open your GitHub repository.
-3. Open or create the file `README.md`.
-4. Paste the content.
-5. Commit the changes.
 
 
