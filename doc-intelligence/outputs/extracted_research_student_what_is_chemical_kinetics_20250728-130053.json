@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "input_documents": [
+      {
+        "filename": "/app/pdfs/chemkine2.pdf",
+        "title": null
+      }
+    ],
+    "persona": "Research Student",
+    "job_to_be_done": "What is chemical kinetics",
+    "processing_timestamp": "2025-07-28T13:00:53+0000"
+  },
+  "extracted_sections": [
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 1,
+      "section_title": "Rack your Brain",
+      "importance_rank": 1
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 1,
+      "section_title": "2NO F",
+      "importance_rank": 2
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 4,
+      "section_title": "Definition",
+      "importance_rank": 3
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 7,
+      "section_title": "Nature of reactant and product",
+      "importance_rank": 4
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 2,
+      "section_title": "Definition",
+      "importance_rank": 5
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 22,
+      "section_title": "Photosensitizer",
+      "importance_rank": 6
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 3,
+      "section_title": "2NH",
+      "importance_rank": 7
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 17,
+      "section_title": "First-order Reaction",
+      "importance_rank": 8
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 1,
+      "section_title": "Rate of Reaction",
+      "importance_rank": 9
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 7,
+      "section_title": "Concentration",
+      "importance_rank": 10
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 1,
+      "section_title": "Rack your Brain",
+      "refined_text": "Can we study the rate of neutralisation reaction of a strong acid and base using chemical kinetics?"
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 1,
+      "section_title": "2NO F",
+      "refined_text": "+ → Here, rate of reaction is measured by the decrease in concentration of F 2 . y Unit for rate of reaction is mol L –1  time –1  or atm time–1 (gaseous substance)."
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 4,
+      "section_title": "Definition",
+      "refined_text": "According to the law of mass action, it states that the rate of chemical equation is directly proportional to the product of the active mass of the reactants, with each active mass term raised to the power equal to its respective"
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 7,
+      "section_title": "Nature of reactant and product",
+      "refined_text": "For ionic reactants, rate of reaction is fast, as activation energy is zero for these. Molecules have a slower reaction rate as they require higher activation energy."
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 2,
+      "section_title": "Definition",
+      "refined_text": "The instantaneous rate of reaction i.e., rate of reaction at any instant of time is the rate of change of concentration of any one of the reactants or products at that instant of time."
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 22,
+      "section_title": "Photosensitizer",
+      "refined_text": "It is a substance which when added to a reaction mixture, helps to start the photochemical reaction, but it does not undergo any chemical change, for example, chlorophyll in photosynthesis and Hg vapours in dissociation of"
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 3,
+      "section_title": "2NH",
+      "refined_text": "+    as an example, the instantaneous rate of reaction is calculated as follows: 2 2 2"
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 17,
+      "section_title": "First-order Reaction",
+      "refined_text": "Here the reaction rate is determined by one concentration variable term only. Here, t = Time period k = Rate constant A r  or a or N 0  = Initial amount A or a – x or N = Amount left after time t"
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 1,
+      "section_title": "Rate of Reaction",
+      "refined_text": "Rate of reaction is defined as the rate of change of concentration of a reactant or a product per unit time. Rate of reaction 2 1 2 1"
+    },
+    {
+      "document": "/app/pdfs/chemkine2.pdf",
+      "page_number": 7,
+      "section_title": "Concentration",
+      "refined_text": "Rate of reaction (dx/dt)  ∝  Concentration."
+    }
+  ]
+}
