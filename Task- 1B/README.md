@@ -12,7 +12,7 @@ The system works fully offline using only **CPU**.
 Open your terminal (Command Prompt or PowerShell on Windows) and run:
 
 ```bash
-docker build -t docintelligence:latest .
+docker build -t Task-1B .
 ```
 b. Prepare Folders for Input/Output
 Place your input PDF files in the pdfs/ directory at your project root.
@@ -21,7 +21,7 @@ Ensure there is an outputs/ directory for results.
 
 c. Run in Interactive Mode (Prompts for Persona & Job)
 ```
-docker run --rm -it -v %cd%\pdfs:/app/pdfs -v %cd%\outputs:/app/outputs docintelligence:latest
+docker run --rm -it -v %cd%\pdfs:/app/pdfs -v %cd%\outputs:/app/outputs Task-1B:latest
 ```
 
 On prompt, enter:
@@ -34,7 +34,7 @@ PDF file paths, comma-separated (e.g., pdfs/file1.pdf, pdfs/file2.pdf)
 
 d. Run in CLI Argument Mode (All Info as Arguments)
 ```
-docker run --rm -it -v %cd%\pdfs:/app/pdfs -v %cd%\outputs:/app/outputs docintelligence:latest ^
+docker run --rm -it -v %cd%\pdfs:/app/pdfs -v %cd%\outputs:/app/outputs Task-1B:latest ^
   "Persona here" "Job to be done here" pdfs/file1.pdf pdfs/file2.pdf
 ```
 ⚠️ For multi-line in PowerShell, use ^; for Bash (Linux/Mac), use \.
@@ -109,4 +109,4 @@ For any issues, consult README.md troubleshooting section or contact the project
 4. Paste the content.
 5. Commit the changes.
 
-Let me know if you'd like to embed images, add badges, or include example screenshots.
+
