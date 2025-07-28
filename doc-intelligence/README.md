@@ -1,22 +1,22 @@
-Quick Summary
-This project requires Python 3.10 or Docker (recommended for reproducibility), runs solely on CPU, and takes PDFs along with user-specified persona and job as input. Output is a structured JSON file per run.
+Quick Start
+This project can be run either with Docker (recommended for portability and consistency) or with a local Python virtual environment.
+The system works fully offline, using only CPU.
 
 1. Running with Docker (Recommended)
 a. Build the Docker Image
-Open your terminal (Command Prompt/PowerShell on Windows) in your project root:
+Open your terminal (Command Prompt or PowerShell on Windows) and run:
 
+text
 docker build -t docintelligence:latest .
+b. Prepare Folders for Input/Output
+Place your input PDF files in the pdfs/ directory at your project root.
 
-b. Prepare Input/Output Folders
-Place your PDF files to be analyzed in the pdfs/ directory.
+Ensure there is an outputs/ directory for results.
 
-Ensure there is an (empty or existing) outputs/ folder at project root.
-
-c. Run in Interactive Mode (Prompts for Persona/Job)
-
+c. Run in Interactive Mode (Prompts for Persona & Job)
+text
 docker run --rm -it -v %cd%\pdfs:/app/pdfs -v %cd%\outputs:/app/outputs docintelligence:latest
-
-When prompted, enter:
+On prompt, enter:
 
 Persona (e.g., PhD researcher in computational biology)
 
@@ -24,61 +24,57 @@ Job to be done (e.g., Prepare a comprehensive literature review...)
 
 PDF file paths, comma-separated (e.g., pdfs/file1.pdf, pdfs/file2.pdf)
 
-d. Run in CLI Arguments Mode
-For non-interactive runs, provide persona, job, and PDF paths as arguments:
-
-
+d. Run in CLI Argument Mode (All Info as Arguments)
+text
 docker run --rm -it -v %cd%\pdfs:/app/pdfs -v %cd%\outputs:/app/outputs docintelligence:latest ^
   "Persona here" "Job to be done here" pdfs/file1.pdf pdfs/file2.pdf
-  
-Note: use ^ to break lines in PowerShell; on Linux/macOS, use \.
+For multi-line in PowerShell, use ^; for Bash (Linux/Mac), use \.
 
 e. Retrieve Output
-The output JSON file will appear in outputs/.
+Find JSON results in the outputs/ folder.
 
-Filename includes persona/job for easy ID, e.g.:
+Files will be named:
 
+text
+extracted_persona_job_timestamp.json
+Example:
 
-outputs/extracted_phd_researcher_prepare_a_comp_20250728-223014.json
-
-2. Running Without Docker (Python Virtualenv)
-   
-a. Create and Activate Virtual Environment
-
+text
+outputs/extracted_phd_researcher_literature_review_20250728-223014.json
+2. Running Without Docker (Python Virtual Environment)
+a. Set Up Environment
+text
 python -m venv venv
-venv\Scripts\activate         # On Windows
-# or source venv/bin/activate # On Linux/Mac
-
+venv\Scripts\activate     # On Windows
+# or: source venv/bin/activate    # On Linux/Mac
 b. Install Dependencies
-
+text
 pip install -r requirements.txt
-
-c. Run Application
-Interactive prompts:
-
-
+c. Run the Application
+With Prompts
+text
 python app/main.py
+You will be prompted for persona, job, and PDF file paths.
 
-Direct CLI arguments:
-
-
+With All Arguments
+text
 python app/main.py "Persona here" "Job to be done here" pdfs/file1.pdf pdfs/file2.pdf
+3. Notes
+All processing is offline (no network required).
 
-3. Input and Output
-   
-Input PDFs: Place in the pdfs/ folder (use full path inside Docker or local shell).
+JSON output structure matches official hackathon template.
 
-Output: Will appear in outputs/ with detailed metadata, section rankings, and summaries.
+Works for any persona, any task, and supports 3–10 PDFs at once.
 
-JSON output structure matches hackathon specification.
+If you experience "file not found" errors, make sure your PDF paths and folder structure match what the instructions expect.
 
-4. Important Notes
-No internet is required at runtime; all models/dependencies are included.
+The system auto-filters out non-informative document sections to maximize relevance.
 
-System auto-filters uninformative sections and produces rich sub-section output.
+4. Troubleshooting
+File Not Found: Make sure the PDFs exist in pdfs/ and supply correct names.
 
-Works for any persona, job, or PDF collection (3–10 files recommended).
+Dependencies Not Installing: Ensure Python 3.10+, Docker, and pip are installed.
 
-For reproducibility, use the included requirements.txt and, if needed, the Dockerfile.
+Output Missing: Output will be in the outputs/ directory, and filenames include persona/job/timestamp.
 
-For any issues, please consult the README troubleshooting section or contact the project owner.
+For any issues, consult README.md troubleshooting or contact the project owner.
