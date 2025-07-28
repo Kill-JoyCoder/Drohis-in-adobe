@@ -13,16 +13,16 @@ Open your terminal (Command Prompt or PowerShell on Windows) and run:
 
 ```bash
 docker build -t docintelligence:latest .
-
+```
 b. Prepare Folders for Input/Output
 Place your input PDF files in the pdfs/ directory at your project root.
 
 Ensure there is an outputs/ directory for results.
 
 c. Run in Interactive Mode (Prompts for Persona & Job)
-
+```
 docker run --rm -it -v %cd%\pdfs:/app/pdfs -v %cd%\outputs:/app/outputs docintelligence:latest
-
+```
 
 On prompt, enter:
 
@@ -33,58 +33,52 @@ Job to be done (e.g., Prepare a comprehensive literature review...)
 PDF file paths, comma-separated (e.g., pdfs/file1.pdf, pdfs/file2.pdf)
 
 d. Run in CLI Argument Mode (All Info as Arguments)
-bash
-Copy
-Edit
+```
 docker run --rm -it -v %cd%\pdfs:/app/pdfs -v %cd%\outputs:/app/outputs docintelligence:latest ^
   "Persona here" "Job to be done here" pdfs/file1.pdf pdfs/file2.pdf
+```
 ⚠️ For multi-line in PowerShell, use ^; for Bash (Linux/Mac), use \.
 
 e. Retrieve Output
 Find JSON results in the outputs/ folder.
 Files will be named as:
 
-pgsql
-Copy
-Edit
+
 extracted_persona_job_timestamp.json
 Example:
 
-bash
-Copy
-Edit
 outputs/extracted_phd_researcher_literature_review_20250728-223014.json
 
 
 2. Running Without Docker (Python Virtual Environment)
 a. Set Up Environment
-bash
-Copy
-Edit
+```
 python -m venv venv
 venv\Scripts\activate     # On Windows
-# or:
+#
+```
+or:
+```
 source venv/bin/activate  # On Linux/Mac
+```
 b. Install Dependencies
-bash
-Copy
-Edit
+
+
+```
 pip install -r requirements.txt
+```
 c. Run the Application
 With Prompts:
-
-bash
-Copy
-Edit
+```
 python app/main.py
+```
 You will be prompted for persona, job, and PDF file paths.
 
 With All Arguments:
-
-bash
-Copy
-Edit
+```
 python app/main.py "Persona here" "Job to be done here" pdfs/file1.pdf pdfs/file2.pdf
+```
+
 3. Notes
 All processing is offline (no network required).
 
@@ -104,10 +98,6 @@ Dependencies Not Installing: Ensure Python 3.10+, Docker, and pip are installed.
 Output Missing: Check the outputs/ directory; filenames include persona/job/timestamp.
 
 For any issues, consult README.md troubleshooting section or contact the project owner.
-
-yaml
-Copy
-Edit
 
 ---
 
